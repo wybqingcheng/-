@@ -1,0 +1,61 @@
+@charset "utf-8";
+body{margin:0;padding:0;font-family:"Microsoft YaHei";min-width:1200px;background:#fff}
+div,dl,dt,dd,dl,ul,ol,li,p,span,h1,h2,h3,h4,h5,h6,tr,td,th,input,textarea,form{
+	margin:0;
+	padding:0;
+}
+fieldset,img {border:0;}
+ul,li,ol{list-style:none;}
+a,a:hover{text-decoration: none;}  
+a:focus{outline:none;} 
+a.hidefocus{outline:none}
+ul, ol { padding: 0;}
+.banner { position: relative; overflow: auto; text-align: center;}
+.banner li { list-style: none; }
+.banner ul li { float: left; }
+#b04 { width: 100%;}
+
+#b04 .dots { position: absolute; left: 0; right: 0; bottom: 0px;}
+
+#b04 .dots li 
+
+{ 
+
+	display: inline-block; 
+
+	width: 20%; 
+
+	height: 32px; 
+
+	margin: 0 10px; 
+	text-align: center;
+	line-height: 32px;
+
+	cursor: pointer; 
+
+	opacity: .4; 
+
+	-webkit-transition: background .5s, opacity .5s; 
+
+	-moz-transition: background .5s, opacity .5s; 
+
+	transition: background .5s, opacity .5s;
+
+}
+
+#b04 .dots li.active 
+
+{
+
+	background: #fff;
+	height: 45px;
+	line-height: 45px;
+	opacity: 1;
+
+}
+
+#b04 .arrow { position: absolute; top: 200px;}
+
+#b04 #al { left: 15px;}
+
+#b04 #ar { right: 15px;}
