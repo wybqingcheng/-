@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航图效果</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <style>
+        *{margin:0; padding:0;list-style:none;}
+        body{
+            background: #fff;
+            font:normal 12px/22px 宋体;
+        }
+        img{border:0}
+        a{text-decoration: none;color: #333}
+        a:hover{color: #1974A1}
+        .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+        .nav{ padding:0 20px; height:34px; line-height:34px; background:#39A4DC;  position:relative; z-index:1;  }
+        .nav a{ color:#fff;  }
+        .nav .nLi{ float:left;  position:relative; display:inline;  }
+        .nav .nLi h3{ float:left;  }
+        .nav .nLi h3 a{ display:block; padding:0 20px; font-size:14px; font-weight:bold;  }
+        .nav .sub{ display:none; width:100px; left:0; top:34px;  position:absolute; background:#4E4E4E;  line-height:26px; padding:5px 0;  }
+        .nav .sub li{ zoom:1; }
+        .nav .sub a{ display:block; padding:0 10px; }
+        .nav .sub a:hover{ background:#6d6d6d; color:#fff;  }
+        .nav .on h3 a{ background:#4E4E4E; color:#fff;   }
+   </style>
+</head>
+<body>
+    <ul id="nav" class="nav clearfix">
+        <li class="nLi on">
+            <h3><a href="图片上下滚动.html" target="_blank">首页</a></h3>
+        </li>
+        <li class="nLi">
+            <h3><a href="图片无缝隙滚动.html" target="_blank">新闻</a></h3>
+            <ul class="sub">
+                <li><a href="#">新闻首页</a></li>
+                <li><a href="#">新闻人物</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">专题</a></li>
+            </ul>
+        </li>
+        <li class="nLi">
+            <h3><a href="模态框.html" target="_blank">预告片</a></h3>
+            <ul class="sub">
+                <li><a href="#">电影</a></li>
+                <li><a href="#">音乐会</a></li>
+                <li><a href="#">新闻电视</a></li>
+                <li><a href="#">人物图片</a></li>
+            </ul>
+        </li>
+        <li class="nLi">
+            <h3><a href="拖拽.html">影评</a></h3>
+            <ul class="sub">
+                <li><a href="#">终结者</a></li>
+                <li><a href="#">豆瓣影评</a></li>
+                <li><a href="#">速度与激情</a></li>
+                <li><a href="#">我们的爱</a></li>
+            </ul>
+        </li>
+        <li class="nLi">
+            <h3><a href="新闻滚动事件.html">资料库</a></h3>
+            <ul class="sub">
+                <li><a href="#">历史</a></li>
+                <li><a href="#">人文</a></li>
+                <li><a href="#">物理</a></li>
+                <li><a href="#">数学</a></li>
+                <li><a href="#">生化危机</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $("#nav").slide({
+            type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+            titCell:".nLi", //鼠标触发对象
+            targetCell:".sub", //titCell里面包含的要显示/消失的对象
+            effect:"slideDown", //targetCell下拉效果
+            delayTime:300 , //效果时间
+            triggerTime:0, //鼠标延迟触发时间（默认150）
+            returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+        })
+    </script>
+</body>
+</html>
